@@ -87,6 +87,10 @@ class Todo{
                 cout<<"\ninvalid id entered\n";
             }
         }
+        inline ~Todo()noexcept{
+            delete[] ptr;
+            ptr = nullptr;
+        }
 };
 
 int main(){
@@ -113,6 +117,7 @@ int main(){
                 break;
             case 5:
                 cout<<"\nprogram closed by user\n";
+                mptr->~Todo();
                 exit(EXIT_SUCCESS);
                 
         }
