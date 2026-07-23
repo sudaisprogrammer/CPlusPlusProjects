@@ -90,6 +90,32 @@ class Todo{
 };
 
 int main(){
-
+    Todo *mptr = new Todo;
+    while(true){
+        int choice;
+        cout<<"\n1. Add item\n";
+        cout<<"2. Remove item\n";
+        cout<<"3. Update item\n";
+        cout<<"4. Display all items\n";
+        cout<<"5. Exit...\n";
+        switch(choice){
+            case 1:
+                mptr->additem();
+                break;
+            case 2:
+                mptr->removeitem();
+                break;
+            case 3:
+                mptr->updateitem();
+                break;
+            case 4:
+                mptr->displayallitems();
+                break;
+            case 5:
+                cout<<"\nprogram closed by user\n";
+                exit(EXIT_SUCCESS);
+                
+        }
+    }
     return 0;
 }
