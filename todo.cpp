@@ -9,14 +9,17 @@ class Todo{
         int id;
         int quantity;
         static int totalitems;
-        int s = 3;
+        int s = 1;
         Todo *ptr;
     public:
         Todo(string name=" ",int i=0,int q=0):itemname(name),id(i),quantity(q){
             totalitems++;
-            ptr = new Todo[s];
+            ptr = nullptr;
+            
         }
         void additem(){
+
+            Todo *nitem = new Todo[s+1];
             string name;int i,q;
             cout<<"Enter the name of the item: ";
             getline(cin,name);
@@ -24,18 +27,29 @@ class Todo{
             cin>>i;
             cout<<"Enter the quantity: ";
             cin>>q;
-            Todo(name,i,q);
-            
-            int ns = 1;
-            Todo *nitem = new Todo[ns];
-            for(int i=0;i<3;i++){
+
+            for(int i=0;i<s;i++){
                 nitem[i] = ptr[i];
             }
+            nitem[s] = Todo(name,i,q);
+            delete[] ptr;
             ptr = nitem;
-            s = ns;
+            s++;
+            cout<<"\nAdded Successfully\n";
         }
         void removeitem(){
-
+            int i_d,f;
+            bool find = false;
+            cout<<"Enter the ID to Remove the element: ";
+            cin>>i_d;
+            for(int i=0;i<s;i++){
+                if(ptr[i].id == i_d){
+                    find = true;
+                    f = i;
+                    break;
+                }
+            }
+            ptr[f];
         }
         void checkcomplete(){
 
