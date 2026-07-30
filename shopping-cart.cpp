@@ -7,7 +7,7 @@ class Product{
         float price;
         static float totalcatvalue;
         static int count;
-        Product*prod = new Product;
+        Product *prod = new Product[3];
         Product(){
 
         }
@@ -40,7 +40,7 @@ class Product{
         }
 };
 int main(){
-    Product *ptr = new Product[3];
+    Product ptr;
     int c;
     while(true){
         cout<<"1. Add Product\n";
