@@ -16,7 +16,12 @@ class Product{
             count++;
         }
         void addProduct(){
-
+            cout<<"\nEnter the Product Name: ";
+            cin.getline(name,40);
+            cout<<"Enter the Product ID: ";
+            cin>>id;
+            cout<<"Enter the Price of Product: ";
+            cin>>price;
         }
         void removeProduct(){
 
