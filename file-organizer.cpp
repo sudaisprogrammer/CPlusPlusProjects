@@ -17,7 +17,6 @@ int main()
 
         if (extension.empty())
             continue;
-
         //Remove '.'
         string folderName = extension.substr(1);
         // Convert to uppercase
