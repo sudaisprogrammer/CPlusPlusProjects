@@ -20,7 +20,6 @@ int main()
 
         // Remove '.'
         string folderName = extension.substr(1);
-
         // Convert to uppercase
         for (char& c : folderName)
             c = toupper(c);
