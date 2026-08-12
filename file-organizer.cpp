@@ -12,7 +12,6 @@ int main()
     {
         if (!fs::is_regular_file(file))
             continue;
-
         string extension = file.path().extension().string();
         if (extension.empty())
             continue;
