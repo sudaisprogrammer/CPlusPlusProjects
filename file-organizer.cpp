@@ -35,7 +35,6 @@ int main()
 
         fs::rename(file.path(), destination);
     }
-
     cout << "Files organized successfully!" << endl;
 
     return 0;
