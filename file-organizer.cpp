@@ -14,7 +14,6 @@ int main()
             continue;
 
         string extension = file.path().extension().string();
-
         if (extension.empty())
             continue;
         //Remove '.'
