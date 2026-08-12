@@ -30,7 +30,7 @@ int main()
         //Create folder if it doesn't exist
         fs::create_directories(folderPath);
 
-        //Move file
+        //Move file to the corresponding folder
         fs::path destination = folderPath / file.path().filename();
 
         fs::rename(file.path(), destination);
