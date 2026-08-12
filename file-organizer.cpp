@@ -27,7 +27,7 @@ int main()
 
         fs::path folderPath = fs::path(downloads) / folderName;
 
-        //Create folder if it doesn't exist
+        //Create folder if it doesnt exist
         fs::create_directories(folderPath);
 
         //Move file to the corresponding folder
