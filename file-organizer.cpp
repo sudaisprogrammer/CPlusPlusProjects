@@ -26,7 +26,6 @@ int main()
             c = toupper(c);
 
         fs::path folderPath = fs::path(downloads) / folderName;
-
         //Create folder if it doesnt exist
         fs::create_directories(folderPath);
 
